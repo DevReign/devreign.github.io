@@ -3,16 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<title>Home</title>
+	<!--<link rel="stylesheet" type="text/css" href="style.css"/>-->
+	<title>Rob Minniti | Software & Game Developer</title>
 	<style>
+			
 		.cover img {
 		    width: 100%;
 		    height: 100%;
 		    object-fit: cover;
 		    overflow: hidden;
 		}
-		.menu_bar{
+		.navbar{
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 48px;
+			z-index: 1000;
+			position: fixed;
+			font-size: 200%;
+			font-weight: bold;
+			background-color: black;
 			/*margin: auto;
 			width: 50%;*/
 			ul {
@@ -34,27 +44,35 @@
 			align-content: center;
 			width: 80%;
 			gap: 16px 16px;
+			padding: 16px 16px 16px 16px;
 		}
 		.flex_item{
 			width: 40%;
 			flex-basis: 0 0 200px;
 		}
 		.wrapper{
-			/*border-width:2px;
+			border-width:2px;
 			border-style:solid;
-			border-color:darkorange;*/
-			margin-right:10%; 
-			margin-left:10%; 
-			font-size: 100%;
-			color: #ffffdd;
-			background-color:#262626;
+			border-color:#fb7e14;
+			border-radius:16px;
+			margin-right:4%; 
+			margin-left:4%; 
+			font-size: 200%;
+			color: #ffffff;
+			background-color:#292929;
+			padding: 16px 16px 16px 16px;
+		}
+		section{
+			margin-top: 64px;
+			margin-bottom: 64px;
+
 		}
 		h2{
-			color:white;
+			color:#fb7e14;
 			font-family: Linotype-Didot;
 		}
 		hr{
-			border-color:orange;
+			border-color:#fb7e14;
 			display: block;
 			height: 1px;
 			border: 0;
@@ -63,48 +81,64 @@
 			padding: 0;
 		}
 		body{
-			background-color:#262626;
+			padding-top: 60px;/*prevents overlapping with navbar*/
+			background-color:#292929;
+		}
+		a:link {
+  		color: white;
+		}
+		a:visited {
+		  color: #fb7e14;
+		  text-decoration: none;
+		}
+		a:hover {
+		  color: white;
+		}
+		a:active {
+		  color: white;
+		}
+		nav a{
+			text-decoration: none;
 		}
 	</style>
 </head>
 <body>
-	<!--width="1920"-->
+	<header><div class="navbar">
+		<nav>
+				<a href="about.html"> Home <a/>
+				<a href="#About"> About <a/>
+				<a href="#Portfolio"> Portfolio <a/>
+				<a href="#Contact"> Contact <a/>
+		</nav>
+		</div>
+	</header>
 	<div class="wrapper">
-		<div class="cover">
-		<h1 style="text-align:center;">Hallowed Grounds Coffee Co. </h1>
-		<img src="images/header.jpg" style="border:1px solid white;">
-		</div>
-		<div class="menu_bar">
-			<ul style="list-style: none;">
-				<li><a href="about.html">Home <a/></li>
-				<li><a href="about.html">About <a/></li>
-				<li><a href="about.html">Portfolio <a/></li>
-			</ul>
-		</div>
-		<hr>
-		<div id="flex_container">
-			<div class="flex_item">
-				<h2>Hello,</h2>
-					Hello, I'm <i style="color:#00FFFF;"><b>Tony</b></i>. I'm a software developer. 
-			</div>
-		</div>
-		<br>
-		<hr>
-		<h3>Contact Info:</h3>
-		<div>
+		<section style="margin: 600px 0px 600px 0px;">
+			<h1 id="home" style="text-align:center;">Hello, I'm <i style="color:#fb7e14;">Tony</i>. I'm a software developer.</h1>
+		<!--img src="images/header.jpg" style="border:1px solid white;"-->
+		</section>
+		<section style="background-color: #151515;">
+			<h2 id="About">About</h2>
+            <p>
+                I am a Software Engineer with a passion for low-level systems, optimization, and game development. My journey began at 14 when I learned to mod Deus Ex using unreal engine and developer tools to create custom maps, scripts, textures and 3D models.
+            </p>
+            <p>
+                I specialize in writing clean, efficient code in C, C++, and Python using libraries like SDL. I also have experience in website development with Content Management Systems (Drupal) and responsive styling libraries (Bootstrap). Fully proficient across the entire production pipeline, my technical toolset spans low-level software architecture, data-driven tool creation, version control (Git), and asset development across Blender and Photoshop. Technical Stack: C, C++, Python, Java, C#, SDL, Pygame, Drupal, Bootstrap, Git, Visual Studio, VS Code, Sublime Text, inkscape, photoshop.
+            </p>
+		</section>
+		<section>
+			<h2 id="Portfolio">Portfolio</h2>
+		</section>
+		<section style="background-color: #151515;">
+			<h2 id="Contact">Contact</h2>
 			<ul>
-			<li><strong>Email- </strong> <a href="mailto:raminniti@student.ysu.edu">raminniti@student.ysu.edu</a> </li>
-		</div>
+			<li><strong>Email-</strong> <a href="mailto:raminniti@student.ysu.edu">raminniti@student.ysu.edu</a> </li>
+		</ul>
+		</section>
 	</div>
 </body>
-<footer>
-	<div id="flex_container">
-		<div class="flex_item">
-			
-		</div>
-		<div class="flex_item">
-			<em style="color: white; align-self: margin-right;">DevReign©2026</em>
-		</div>
-	</div>
+<footer style="background-color: #151515; width: 100%;">
+	<a href="https://github.com/DevReign"><img src="images/GitHub_Invertocat_White.png" alt="github icon" width="64" height="64" style="display: block; margin-left: auto; margin-right: auto; "></a>
+	<p style="text-align:center; color: white;"><em>DevReign ©2026</em></p>
 </footer>
 </html>
