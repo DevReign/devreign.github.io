@@ -6,7 +6,11 @@
 	<!--<link rel="stylesheet" type="text/css" href="style.css"/>-->
 	<title>Rob Minniti | Software & Game Developer</title>
 	<style>
-			
+			*{
+				font-size: 100%;
+				margin: 0;
+				box-sizing: border-box; /* fix weird spacing on sides of sections */
+			}
 		.cover img {
 		    width: 100%;
 		    height: 100%;
@@ -14,27 +18,23 @@
 		    overflow: hidden;
 		}
 		.navbar{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			align-self: center;
+			align-content: center;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 48px;
+			height: 40px;
 			z-index: 1000;
 			position: fixed;
-			font-size: 200%;
 			font-weight: bold;
 			background-color: black;
-			/*margin: auto;
-			width: 50%;*/
-			ul {
-				  list-style: none;
-			}
-
-			li {
-			  display: inline-block;
-			  margin-right: 10px; /* add spacing between items */
-			}
+			border-bottom: 1px solid #fb7e14;
 		}
-		#flex_container{
+		.flex_container{
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
@@ -43,29 +43,18 @@
 			align-self: center;
 			align-content: center;
 			width: 80%;
-			gap: 16px 16px;
 			padding: 16px 16px 16px 16px;
 		}
 		.flex_item{
 			width: 40%;
 			flex-basis: 0 0 200px;
 		}
-		.wrapper{
-			border-width:2px;
-			border-style:solid;
-			border-color:#fb7e14;
-			border-radius:16px;
-			margin-right:4%; 
-			margin-left:4%; 
-			font-size: 200%;
-			color: #ffffff;
-			background-color:#292929;
-			padding: 16px 16px 16px 16px;
-		}
 		section{
-			margin-top: 64px;
-			margin-bottom: 64px;
-
+			/*margin-top: 64px;
+			margin-bottom: 64px;*/
+			width: 100%;
+			padding: 16px 16px 16px 16px;
+			margin: 0;
 		}
 		h2{
 			color:#fb7e14;
@@ -81,64 +70,72 @@
 			padding: 0;
 		}
 		body{
-			padding-top: 60px;/*prevents overlapping with navbar*/
+			min-height: 100vh;
+	    display: flex;
+	    flex-direction: column;
+	    margin: 0;
+			width: 100%;
+			padding-top: 40px;/*prevents overlapping with navbar*/
+			font-size: 200%;
+			color: #ffffff;
 			background-color:#292929;
+			margin: 0px 0px 0px 0px;
+		}
+		main{
+			flex: 1;
+		}
+		footer{
+			margin: 0px 0px 0px 0px;
 		}
 		a:link {
-  		color: white;
+			color: white; 
+			text-decoration: none;
 		}
 		a:visited {
 		  color: #fb7e14;
-		  text-decoration: none;
-		}
-		a:hover {
-		  color: white;
-		}
-		a:active {
-		  color: white;
-		}
-		nav a{
-			text-decoration: none;
-		}
+		  text-decoration: none; }
+		a:hover { color: white; }
+		a:active { color: white; }
+		nav a{ text-decoration: none; }
 	</style>
 </head>
 <body>
-	<header><div class="navbar">
-		<nav>
-				<a href="about.html"> Home <a/>
-				<a href="#About"> About <a/>
-				<a href="#Portfolio"> Portfolio <a/>
-				<a href="#Contact"> Contact <a/>
-		</nav>
+	<header>
+		<div class="navbar">
+			<nav>
+					<a href="#Home"> Home <a/>
+					<a href="#About"> About <a/>
+					<a href="#Portfolio"> Portfolio <a/>
+					<a href="#Contact"> Contact <a/>
+			</nav>
+			<a href="#home">Rob M</a>
 		</div>
 	</header>
-	<div class="wrapper">
-		<section style="margin: 600px 0px 600px 0px;">
-			<h1 id="home" style="text-align:center;">Hello, I'm <i style="color:#fb7e14;">Tony</i>. I'm a software developer.</h1>
+		<main>
+			<section style="padding: 600px 0px 600px 0px; background-color: #151515;">
+			<h1 id="Home" style="text-align:center;">Hello, I'm <i style="color:#fb7e14;">Rob</i>.<br>I'm a software developer.</h1>
 		<!--img src="images/header.jpg" style="border:1px solid white;"-->
 		</section>
-		<section style="background-color: #151515;">
+		<section style="background-color: #292929;">
 			<h2 id="About">About</h2>
-            <p>
-                I am a Software Engineer with a passion for low-level systems, optimization, and game development. My journey began at 14 when I learned to mod Deus Ex using unreal engine and developer tools to create custom maps, scripts, textures and 3D models.
-            </p>
-            <p>
-                I specialize in writing clean, efficient code in C, C++, and Python using libraries like SDL. I also have experience in website development with Content Management Systems (Drupal) and responsive styling libraries (Bootstrap). Fully proficient across the entire production pipeline, my technical toolset spans low-level software architecture, data-driven tool creation, version control (Git), and asset development across Blender and Photoshop. Technical Stack: C, C++, Python, Java, C#, SDL, Pygame, Drupal, Bootstrap, Git, Visual Studio, VS Code, Sublime Text, inkscape, photoshop.
-            </p>
+	          <p>
+	              I am a Software Developer with a passion for low-level systems, optimization, and game development. My journey began at 14 when I learned to mod Deus Ex using unreal engine and developer tools to create custom maps, scripts, textures and 3D models.
+	          </p>
+	          <p>
+	              I specialize in writing clean, efficient code in C, C++, and Python using libraries like SDL. I also have experience in website development with Content Management Systems (Drupal) and responsive styling libraries (Bootstrap). Fully proficient across the entire production pipeline, my technical toolset spans low-level software architecture, data-driven tool creation, version control (Git), and asset development across Blender and Photoshop. Technical Stack: C, C++, Python, Java, C#, SDL, Pygame, Drupal, Bootstrap, Git, Visual Studio, VS Code, Sublime Text, inkscape, photoshop.
+	          </p>
 		</section>
-		<section>
+		<section style="background-color: #151515;">
 			<h2 id="Portfolio">Portfolio</h2>
 		</section>
-		<section style="background-color: #151515;">
+		<section style="background-color: #292929">
 			<h2 id="Contact">Contact</h2>
-			<ul>
-			<li><strong>Email-</strong> <a href="mailto:raminniti@student.ysu.edu">raminniti@student.ysu.edu</a> </li>
-		</ul>
+			<strong>Email-</strong> <a href="mailto:raminniti@student.ysu.edu">raminniti@student.ysu.edu</a>
 		</section>
-	</div>
+	</main>
+	<footer style="background-color: #151515; width: 100%; padding-top: 16px;">
+		<a href="https://github.com/DevReign"><img src="images/GitHub_Invertocat_White.png" alt="github icon" width="64" height="64" style="display: block; margin-left: auto; margin-right:auto;"></a>
+		<p style="text-align:center; color: white; font-size: 50%;"><em>DevReign ©2026</em></p>
+	</footer>
 </body>
-<footer style="background-color: #151515; width: 100%;">
-	<a href="https://github.com/DevReign"><img src="images/GitHub_Invertocat_White.png" alt="github icon" width="64" height="64" style="display: block; margin-left: auto; margin-right: auto; "></a>
-	<p style="text-align:center; color: white;"><em>DevReign ©2026</em></p>
-</footer>
 </html>
