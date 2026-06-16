@@ -14,6 +14,7 @@
 		}
 		*{
 			font-size: 100%;
+			color: #b47506;
 			margin: 0;
 			box-sizing: border-box; /* fix weird spacing on sides of sections */
 		}
@@ -55,6 +56,26 @@
 		.flex_item{
 			width: 40%;
 			flex-basis: 0 0 200px;
+		}
+		.hero-container {
+			width: 100%;
+			min-height: 100vh; /* Fallback for older browsers */
+			min-height: 100dvh; /* Dynamic height that adjusts for mobile UI bars */
+			display: flex;
+			flex-direction: column;
+			background-color: #151515;
+			display: flex;            /* Enables flexbox layout */
+			justify-content: center;   /* Centers horizontally */
+			align-items: center;       /* Centers vertically */
+			height: 100vh;             /* Gives the container full viewport height to shovertical centering */
+		}
+		.list_container{
+			width: 30%;
+			max-width: 100%;
+			box-sizing: border-box; /* Ensures padding doesn't add to the width */
+			padding-left: 1rem;
+			padding-right: 1rem;
+			overflow-x: auto;  /* Adds a subtle swipe scroll if content is still too wide */
 		}
 		figure {
 		  max-width: 100%;
@@ -112,7 +133,7 @@
 		}
 		h1, h2, .terminal-text {
 		    color: #fca712;
-		    text-shadow: 0 0 4px rgba(252, 167, 18, 0.5); /* Soft amber screen glow */
+		    text-shadow: 0 0 4px rgba(252, 167, 18, 0.5); /*↓⇩↧⇓⬇⇣ Soft amber screen glow */
 		}
 		a:link {
 			color: white; 
@@ -141,8 +162,8 @@
 	</header>
 		<main>
 			<h1 id="Home"> </h1>
-			<section style="padding: 600px 0px 600px 0px; background-color: #151515;">
-			<h1 style="text-align:center;">Hello world! <br>I'm <i style="color:#fb7e14;">Rob</i>, a software Developer <br><br><a href="#About">C:\Read\more>↓</a></h1>
+			<section class="hero-container">
+			<h1 style="text-align:center;">Hello world! <br>I'm <i style="color:#fb7e14;">Rob</i>, a software Developer <br><br><a href="#About">C:\Read\more><br>↓</a></h1>
 		<!--img src="images/header.jpg" style="border:1px solid white;"-->
 		</section>
 		<section style="background-color: #292929;">
@@ -155,7 +176,7 @@
 			</div>
 			<hr>
 			<div style="display: flex; flex-direction: row; align-items: flex-start; justify-content: space-evenly;">
-				<div style="width:30%;">
+				<div class=".list_container">
 					<h5>Languages:</h5>
 			        <ul>
 			          	<li>Python</li>
@@ -166,7 +187,7 @@
 			          	<li>SQL</li>
 			        </ul>
 		      	</div>
-				<div style="width:30%;">
+				<div class=".list_container">
 					<h5>Libraries <br>& Software</h5>
 			         <ul>
 			          	<li>Bootstrap</li>
@@ -183,7 +204,7 @@
 			          	<li>Godot</li>
 			         </ul>
 		      	</div>
-				<div style="width:30%;">
+				<div class=".list_container">
 					<h5>Skills:</h5>
 			        <ul>
 			          	<li>Computer Assembly</li>
