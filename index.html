@@ -38,9 +38,9 @@
 			height: 40px;
 			z-index: 1000;
 			position: fixed;
-			/*font-weight: bold;
+			font-weight: bold;
 			background-color: black;
-			border-bottom: 1px solid #b47506;*/
+			border-bottom: 1px solid #b47506;
 		}
 		.flex_container{
 			display: flex;
@@ -145,6 +145,9 @@
 		a:hover { color: white; }
 		a:active { color: white; }
 		nav a{ text-decoration: none; }
+		#projects, #about, #contact { 
+		  scroll-margin-top: 60px; 
+		}
 	</style>
 </head>
 <body>
@@ -153,9 +156,9 @@
 		<div class="navbar">
 			<nav>
 				<!--a href="#Home">Home<a/-->
-				<a href="#About">About<a/>
-				<a href="#Projects">Projects<a/>
-				<a href="#Contact">Contact<a/>
+				<a href="#about">About<a/>
+				<a href="#projects">Projects<a/>
+				<a href="#contact">Contact<a/>
 			</nav>
 			<a href="#Home">R</a>
 		</div>
@@ -167,7 +170,7 @@
 		<!--img src="images/header.jpg" style="border:1px solid white;"-->
 		</section>
 		<section style="background-color: #292929;">
-			<h2 id="About">About Me</h2>
+			<h2 id="about">About Me</h2>
 			<div>
 				<p><!--style="display: flex; align-items: left; gap: 20px; flex-direction: row;"-->
 	          	<!--img src="images/pfp.jpg" alt="Picture of Rob" width="192" height="256" style="float: left; margin-right: 15px;"-->
@@ -218,21 +221,62 @@
 		  	</div>
 		</section>
 		<section style="background-color: #151515;">
-			<h2 id="Projects">Projects</h2>
+			<h2 id="projects">Projects</h2>
 			<div>
+				<div>
+					<div style="width: 80%; margin-left: auto; margin-right:auto;"><p>
+						<h3><center>C/C++ 2D Game engine</center></h3>
+						<figure>
+						<img src="images/cpp-engine-debug-collision.png" alt="C++/SDL2 2D Engine running" width="100%" height="auto">
+						<figcaption>C/C++/SDL2 2D Engine – Real time debug view highlighting step-collision bounds and bitwise flag state management.</figcaption>
+						</figure>
+						<br>
+					</p>
+				</div>
+				<div>
+					<div style="width: 80%; margin-left: auto; margin-right:auto;"><p>
+						<h3><center>Engine Architecture</center></h3>
+						<figure>
+						<img src="images/cpp-engine-core-architecture.png" alt="Game engine code" width="100%" height="auto">
+						<figcaption>Engine Architecture – Collision implementation with bitmask flags.</figcaption>
+						</figure>
+						<br>
+					</p>
+				</div>
+				<div>
+					<div style="width: 80%; margin-left: auto; margin-right:auto;"><p>
+						<h3><center>Python Level Editor</center></h3>
+						<figure>
+						<img src="images/python-map-editor-interface.png" alt="level editor tool" width="100%" height="auto">
+						<figcaption>Custom Map Editor – Python/OOP tile level editing tool.</figcaption>
+						</figure>
+						<br>
+					</p>
+				</div>
+				<div>
+					<div style="width: 80%; margin-left: auto; margin-right:auto;"><p>
+						<h3><center>Python Level Editor Code</center></h3>
+						<figure>
+						<img src="images/python-level-editor-code.png" alt="level editor code" width="100%" height="auto">
+						<figcaption>Custom Map Editor – Python/OOP tile level editor code.</figcaption>
+						</figure>
+						<br>
+					</p>
+				</div>
 				<div>
 					<div style="width: 80%; margin-left: auto; margin-right:auto;"><p>
 						<h3><center>3D Models</center></h3>
 						<figure>
-						<img src="images/blender.png" alt="image of a 3d model in blender" width="100%" height="auto">
-						<figcaption>3D models made for a Unity FPS project.</figcaption>
+						<img src="images/blender-pistol-model.png" alt="\3d model in blender" width="100%" height="auto">
+						<figcaption>3D model - made for a Unity FPS project.</figcaption>
 						</figure>
+						<br>
 					</p>
 				</div>
 			</div>
 		</section>
 		<section style="background-color: #292929">
-			<h2 id="Contact">Contact</h2>
+			<h2 id="contact">Contact</h2>
 			<a href="mailto:raminniti@protonmail.com"><strong>Email</strong></a>
 		</section>
 	</main>
